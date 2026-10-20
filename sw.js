@@ -1,4 +1,4 @@
-const CACHE = 'pfgen-v2';
+const CACHE = 'pfgen-v3';
 const ASSETS = ['./', './index.html', './style.css', './script.js', './manifest.json'];
 
 self.addEventListener('install', e => {
