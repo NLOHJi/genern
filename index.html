@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#111827">
+  <title>Portfolio Generator</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- HOME -->
+<section id="screen-home" class="screen active">
+  <header class="bar">
+    <h1>Portfolio Generator</h1>
+    <button id="btn-theme" class="ghost" style="font-size:18px; padding:4px 10px;">🌙</button>
+  </header>
+  <main class="pad">
+    <button id="new-client" class="primary block">+ New Client</button>
+    <div id="client-list" class="client-list"></div>
+    <p id="empty-note" class="muted">No clients yet.</p>
+  </main>
+</section>
+
+<!-- EDIT -->
+<section id="screen-edit" class="screen">
+  <header class="bar">
+    <button class="ghost" data-home>←</button>
+    <h1 id="edit-title">Edit</h1>
+    <button class="ghost" id="btn-save">Save</button>
+  </header>
+  <div class="tabs">
+    <button class="tab active" data-tab="form">Edit</button>
+    <button class="tab" data-tab="preview">Preview</button>
+  </div>
+  <main id="tab-form" class="pad"></main>
+  <iframe id="tab-preview" class="preview-frame" hidden></iframe>
+  <div class="action-bar">
+    <button class="ghost block" id="btn-export-html">Export HTML</button>
+    <button class="ghost block" id="btn-export-pdf">Export PDF</button>
+    <button class="ghost block" id="btn-export-json">Export JSON</button>
+  </div>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
